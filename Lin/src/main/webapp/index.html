@@ -33,7 +33,7 @@
                 return;
             }
             var cpsw = $("#cr_upwd").val();
-            if (cpsw!=psw) {
+            if (cpsw != psw) {
                 layer.tips("两次密码输入不一致！", "#cr_upwd", [{time: 3000, tips: [2, "#FF0000"]}]);
                 return;
             }
@@ -54,7 +54,8 @@
                 },
                 method: "post",
                 success: function (result) {//这是回调函数
-                    layer.alert("注册" + result);
+//                    layer.alert("注册" + result);
+                    window.location.href = "index.html";
                 },
                 error: function () {//这也是
                     layer.msg("请求服务器失败！");
@@ -98,7 +99,8 @@
                 },
                 method: "post",
                 success: function (result) {//这是回调函数
-                    layer.alert("登录" + result);
+//                    layer.alert("登录" + result);
+                    window.location.href = "admin.html";
                 },
                 error: function () {//这也是
                     layer.msg("请求服务器失败！");
